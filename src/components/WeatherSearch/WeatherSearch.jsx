@@ -21,7 +21,7 @@ function WeatherSearch({onChangeCity}) {
       <form 
             onSubmit={handleSubmit}>
       <input 
-        className='w-60 h-10 m-8 rounded-lg border-solid border-2 border-green-950'
+        className='w-60 h-10 m-6 rounded-lg border-solid border-2 border-green-950'
         type="text"
         value={city}
         onChange={handleChange}

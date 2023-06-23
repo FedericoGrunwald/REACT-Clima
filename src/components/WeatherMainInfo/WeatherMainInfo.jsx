@@ -14,9 +14,11 @@ function WeatherMainInfo({weather}) {
                 <img src={`http:${weather?.current?.condition?.icon}`}
                 width="70" alt={weather?.current?.condition?.text}/>
             </div>
-            <div>
+            <div className="flex flex-col mt-4"> 
               <div className='font-bold text-xl'>
-                {weather?.current?.condition.text}
+                {weather?.current?.condition.text} 
+              </div>
+              <div className='flex justify-center font-bold text-xl'>
                 {weather?.current?.temp_c}°
               </div>
             </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import WeatherSearch from "../WeatherSearch/WeatherSearch";
 import WeatherMainInfo from "../WeatherMainInfo/WeatherMainInfo";
+import Loading from "../Loading/Loading";
 
 function WeatherData() {
   const [weather, setWeather] = useState(null);
@@ -45,7 +46,7 @@ function WeatherData() {
     <div className=" flex justify-center">
       <WeatherSearch className=""
                      onChangeCity={handleChangeCity} />
-      <WeatherMainInfo weather={weather}/>
+      {weather ? <WeatherMainInfo weather={weather} /> : <Loading />}
     </div>
   );
 }
